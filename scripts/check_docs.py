@@ -68,8 +68,12 @@ def check_skill() -> None:
                 re.search(r"(?m)^description:\s*\S", meta) is not None,
                 "skill/SKILL.md frontmatter 缺少 description",
             )
-    for name in ("templates.md", "operators.md"):
+    for name in ("templates.md", "operators.md", "examples.md"):
         check((skill_dir / name).is_file(), f"缺少 skill/{name}")
+    check(
+        len(read(skill).splitlines()) <= 400,
+        "skill/SKILL.md 超过 400 行，考虑拆分到 references",
+    )
 
 
 def check_cards() -> None:

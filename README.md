@@ -21,7 +21,7 @@
 
 ## 安装与使用
 
-无需任何依赖，`skill/` 下三份 Markdown 即可使用。
+无需任何依赖，`skill/` 下四份 Markdown 即可使用。
 
 **Cursor**
 
@@ -40,13 +40,17 @@ cp skill/*.md ~/.claude/skills/manhattan-project/
 **调用方式**：在对话里显式点名，例如「用曼哈顿模式启动」。
 SKILL.md frontmatter 中设置了 `disable-model-invocation: true`，避免被模型自动触发。
 
+运行时会在项目根目录生成 `.manhattan/`（作战目标、授权书、线卡、判别点报告、裁决记录、两门检查单等），
+全部是 Markdown，可随项目提交，用于跨会话恢复。详见 [skill/templates.md](skill/templates.md)。
+
 ## 目录导航
 
 | 路径 | 内容 |
 |---|---|
 | [skill/SKILL.md](skill/SKILL.md) | 角色分工、八段工作流、四种技术裁决、红线 |
 | [skill/templates.md](skill/templates.md) | 作战目标 / 授权书 / 线卡 / 接口协议 / 裁决记录 / 11 问 grill 库 |
-| [skill/operators.md](skill/operators.md) | 15 个组织算子的史实锚点与关键原文 |
+| [skill/operators.md](skill/operators.md) | 15 个组织算子的史实锚点、关键原文与按阶段索引 |
+| [skill/examples.md](skill/examples.md) | 完整走一遍八段流程的示例（2 条线、含裁决与复盘） |
 | [corpus/index.md](corpus/index.md) | 23 张证据卡总览、算子覆盖检查、待补清单 |
 | [corpus/cards/](corpus/cards/) | 证据卡：YAML frontmatter + 短摘录 + 转译 + 不可迁移说明 |
 | [corpus/sources.md](corpus/sources.md) | 来源登记与 A–E 证据分级 |
@@ -75,8 +79,8 @@ SKILL.md frontmatter 中设置了 `disable-model-invocation: true`，避免被�
    围栏内开放、接口协议、行政卸载、探索线、失败隔离实体），共 23 张（`corpus/cards/`）。
 6. **定位决策**：讨论"专一曼哈顿还是整合各案例"，结论为"曼哈顿做壳、群案做证"；
    开发者拍板先做纯曼哈顿版，跨案例元素留扩展位（`corpus/design/blueprint.md`）。
-7. **skill 落成**：`skill/` 三文件，安装到 `~/.cursor/skills/manhattan-project/` 或
-   `~/.claude/skills/manhattan-project/`，显式点名调用（"用曼哈顿模式启动"）。
+7. **skill 落成**：`skill/` 四文件（SKILL + 文书模板 + 算子索引 + 示例），安装到
+   `~/.cursor/skills/manhattan-project/` 或 `~/.claude/skills/manhattan-project/`，显式点名调用（"用曼哈顿模式启动"）。
 
 ## 方法论要点（复用价值）
 
