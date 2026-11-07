@@ -50,7 +50,7 @@
 - 探索线管理：MAN-EXPLORE-01 ✔（单案例）
 - 失败隔离实体：KEL-SHIELD-01 ✔（单案例）
 
-## 八段模式覆盖（对应 design/blueprint.md）
+## 八段模式覆盖（对应 [docs/design.md](../docs/design.md)）
 
 1 明确需求 ✔ ｜ 2 遍历人才+授权领导 ✔（MAN-LEAD-01 新增）｜ 3 /grill ✔ ｜ 4 招募人才 ✔（MAN-RECRUIT-01 新增）｜ 5 集中管理/多点并行 ✔（MAN-SITE/SHIELD/IFACE 新增）｜ 6 技术决策 ✔ ｜ 7 试点试验 ✔ ｜ 8 交付=两门 ✔
 
