@@ -103,14 +103,35 @@ def check_cards() -> None:
 
 
 def check_layout() -> None:
-    for path in ("README.md", "LICENSE", "corpus/index.md", "corpus/sources.md"):
+    for path in (
+        "README.md",
+        "LICENSE",
+        "corpus/index.md",
+        "corpus/sources.md",
+        "docs/origin.md",
+        "docs/evidence.md",
+        "docs/design.md",
+    ):
         check((ROOT / path).is_file(), f"缺少 {path}")
-    canvases = list((ROOT / "canvases").glob("*.canvas.tsx"))
-    check(len(canvases) == 7, f"canvases 数量应为 7，实际 {len(canvases)}")
+    canvases = list((ROOT / "docs" / "canvases").glob("*.canvas.tsx"))
+    check(len(canvases) == 7, f"docs/canvases 数量应为 7，实际 {len(canvases)}")
+
+
+def check_separation() -> None:
+    """skill/ 只放工程实践内容；来历、制作过程等背景档案应放在 docs/。"""
+    banned = ("缘起", "制作路线", "打包日期")
+    for path in sorted((ROOT / "skill").glob("*.md")):
+        text = read(path)
+        for word in banned:
+            check(
+                word not in text,
+                f"{path.relative_to(ROOT)} 含背景档案内容「{word}」，应放到 docs/",
+            )
 
 
 def main() -> int:
     check_layout()
+    check_separation()
     check_skill()
     check_cards()
     check_relative_links()
