@@ -21,8 +21,22 @@
 | 经费倒挂 | 项目成本结构 | 约 84% 支出在铀/钚生产设施，武器实验室不足 4%——判别数据的基建才是大头 |
 | 试验门/发布门分立 | Trinity vs 临时委员会（第10-11章） | "能不能用"由实验场回答；"用不用"由 1945-05 设立的另一机构、另一套席位议决 |
 
+## 按阶段查算子
+
+| 阶段 | 可用算子 / 卡片 |
+|---|---|
+| 1 作战目标 | MAN-PARALLEL-01（判别点 / 预算 / 时限）、POL-GOAL-01（目标 vs 立项话术） |
+| 2 授权 | MAN-LEAD-01、MAN-DECIDE-01 |
+| 3 /grill | MAN-PARALLEL-02（不确定度 → 并行宽度）、THEORY-01（并行判据） |
+| 4 招募 | MAN-RECRUIT-01、MAN-DECIDE-01、MAN-SITE-01 |
+| 5 并行 | MAN-INFRA-01、MAN-IFACE-01、MAN-SHIELD-01、KEL-SHIELD-01 |
+| 6 裁决 | MAN-KILL-01 / 02、MAN-SERIAL-01、MAN-EXPLORE-01、CTRL-DRIFT-01（反例） |
+| 7 试验门 | HST-TEST-01、STS-GATE-01、MAN-KILL-01 |
+| 8 发布门 | MAN-RELEASE-01、HGP-RELEASE-01 |
+
 ## 使用规则
 
 - 引用算子说服用户时给史实锚点，不复述故事。
+- 写进 SKILL.md 的算子必须有卡片支撑；仅 D/E 级证据的结论置信度封顶 medium。
 - 以上全部来自单一案例（曼哈顿）。跨案例验证与反例（哈勃、哥伦比亚号、北极星、
   人类基因组）在证据卡片库中已有卡片，待后续版本并入。
